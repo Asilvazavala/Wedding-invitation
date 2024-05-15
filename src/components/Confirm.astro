@@ -1,12 +1,11 @@
 ---
-import ChurchIcon from "../../public/svgs/Church.astro";
-import CupIcon from "../../public/svgs/Cup.astro";
+import WhatsappIcon from "../../public/svgs/Whatsapp.astro";
 ---
 
 <main class="mt-[100px] flex flex-col justify-center items-center gap-y-6">
   <img src="./images/flowerMain.png" class="-mb-12" alt="Flor de adorno" />
   <article
-    class="flex flex-col justify-center items-center gap-y-6 shadow-xl mb-20 p-12"
+    class="flex flex-col justify-center items-center gap-y-6 shadow-xl p-12"
     style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);"
   >
     <h2 class="text-primary font-normal text-6xl">Confirma tu asistencia</h2>
@@ -22,8 +21,10 @@ import CupIcon from "../../public/svgs/Cup.astro";
         target="_blank"
         rel="noopener"
         class="uppercase px-12 py-3 bg-secondary mt-4 border border-white tracking-[0.3em] text-sm
-         duration-300 hover:bg-white hover:border-secondary hover:text-secondary"
-        >¡Confirmar con Antonio!
+         duration-300 hover:bg-white hover:border-secondary hover:text-secondary flex justify-center
+         items-center gap-x-2"
+        ><WhatsappIcon class="size-5" />
+        <p>¡Confirmar con Antonio!</p>
       </a>
 
       <a
@@ -31,8 +32,10 @@ import CupIcon from "../../public/svgs/Cup.astro";
         target="_blank"
         rel="noopener"
         class="uppercase px-12 py-3 bg-secondary mt-4 border border-white tracking-[0.3em] text-sm
-         duration-300 hover:bg-white hover:border-secondary hover:text-secondary"
-        >¡Confirmar con Cinthia!
+         duration-300 hover:bg-white hover:border-secondary hover:text-secondary flex justify-center
+         items-center gap-x-2"
+        ><WhatsappIcon class="size-5" />
+        <p>¡Confirmar con Cinthia!</p>
       </a>
     </aside>
   </article>
