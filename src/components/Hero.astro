@@ -1,49 +1,63 @@
 <main
-  class="flex flex-col justify-center items-center text-white h-screen gap-y-8"
+  class="flex flex-col justify-center items-center text-white gap-y-8 h-screen max-[1000px]:pb-48"
 >
   <img
     src="./images/Cindy y yo.jpg"
-    class="w-full h-fit opacity-75 brightness-75 -z-10 absolute top-0 left-0"
+    class="w-full object-cover h-[70%] opacity-75 brightness-75 -z-10 absolute top-0 left-0
+    lg:h-fit"
     alt="Cinthia y Antonio"
   />
 
-  <h2 class="text-2xl">¡NOS CASAMOS!</h2>
-  <h1 class="font-bold text-9xl">Cinthia & Antonio</h1>
+  <h2 class="text-xl md:text-2xl">¡NOS CASAMOS!</h2>
+  <h1 class="font-bold text-5xl md:text-7xl lg:text-9xl">Cinthia & Antonio</h1>
 
-  <article class="flex gap-x-8" id="contador">
+  <article
+    class="gap-x-2 grid grid-cols-4 px-2 md:flex md:gap-x-8"
+    id="contador"
+  >
     <aside
-      class="flex flex-col justify-center items-center border border-white py-4 px-12"
+      class="flex flex-col justify-center items-center border border-white py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
     >
-      <span id="dias" class="text-6xl font-bold">66</span>
-      <span class="text-xl">Días</span>
+      <span id="dias" class="text-4xl md:text-5xl lg:text-6xl font-bold"
+        >66</span
+      >
+      <span class="md:text-xl">Días</span>
     </aside>
 
     <aside
-      class="flex flex-col justify-center items-center border border-white py-4 px-12"
+      class="flex flex-col justify-center items-center border border-white py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
     >
-      <span id="horas" class="text-6xl font-bold">15</span>
-      <span class="text-xl">Horas</span>
+      <span id="horas" class="text-4xl md:text-5xl lg:text-6xl font-bold"
+        >15</span
+      >
+      <span class="md:text-xl">Horas</span>
     </aside>
 
     <aside
-      class="flex flex-col justify-center items-center border border-white py-4 px-12"
+      class="flex flex-col justify-center items-center border border-white py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
     >
-      <span id="minutos" class="text-6xl font-bold">49</span>
-      <span class="text-xl">Minutos</span>
+      <span id="minutos" class="text-4xl md:text-5xl lg:text-6xl font-bold"
+        >49</span
+      >
+      <span class="md:text-xl">Minutos</span>
     </aside>
 
     <aside
-      class="flex flex-col justify-center items-center border border-white py-4 px-12"
+      class="flex flex-col justify-center items-center border border-white py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
     >
-      <span id="segundos" class="text-6xl font-bold">10</span>
-      <span class="text-xl">Segundos</span>
+      <span id="segundos" class="text-4xl md:text-5xl lg:text-6xl font-bold"
+        >10</span
+      >
+      <span class="md:text-xl">Segundos</span>
     </aside>
   </article>
 
   <article class="flex justify-center items-center">
-    <div class="h-0.5 w-32 bg-third mr-4"></div>
-    <p class="uppercase font-light text-xl">4 de enero de 2025</p>
-    <div class="h-0.5 w-32 bg-third ml-4"></div>
+    <div class="h-0.5 w-16 md:w-32 bg-third mr-4"></div>
+    <p class="uppercase font-light md:text-xl text-center">
+      4 de enero de 2025
+    </p>
+    <div class="h-0.5 w-16 md:w-32 bg-third ml-4"></div>
   </article>
 </main>
 

@@ -5,24 +5,26 @@ import WhatsappIcon from "../../public/svgs/Whatsapp.astro";
 <main class="mt-[100px] flex flex-col justify-center items-center gap-y-6">
   <img src="./images/flowerMain.png" class="-mb-12" alt="Flor de adorno" />
   <article
-    class="flex flex-col justify-center items-center gap-y-6 shadow-xl p-12"
+    class="flex flex-col justify-center items-center gap-y-6 shadow-xl px-2 py-12 md:p-12"
     style="box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);"
   >
-    <h2 class="text-primary font-normal text-6xl">Confirma tu asistencia</h2>
-    <p
-      class="text-gray max-w-[600px] text-center text-2xl font-light text-balance"
-    >
+    <h2 class="text-primary font-normal text-center text-3xl md:text-6xl">
+      Confirma tu asistencia
+    </h2>
+    <p class="text-gray text-center font-light text-balance lg:text-2xl">
       Antes del 01 de junio
     </p>
 
-    <aside class="flex justify-center items-center gap-x-16 text-white">
+    <aside
+      class="flex justify-center items-center gap-x-16 gap-y-8 text-white flex-col md:flex-row"
+    >
       <a
         href="https://api.whatsapp.com/send?phone=524561148433"
         target="_blank"
         rel="noopener"
-        class="uppercase px-12 py-3 bg-secondary mt-4 border border-white tracking-[0.3em] text-sm
+        class="uppercase py-3 bg-secondary mt-4 border border-white tracking-[0.3em] text-sm
          duration-300 hover:bg-white hover:border-secondary hover:text-secondary flex justify-center
-         items-center gap-x-2"
+         items-center gap-x-2 max-[600px]:w-[90vw] md:px-12"
         ><WhatsappIcon class="size-5" />
         <p>¡Confirmar con Antonio!</p>
       </a>
@@ -31,9 +33,9 @@ import WhatsappIcon from "../../public/svgs/Whatsapp.astro";
         href="https://api.whatsapp.com/send?phone=524561304807"
         target="_blank"
         rel="noopener"
-        class="uppercase px-12 py-3 bg-secondary mt-4 border border-white tracking-[0.3em] text-sm
+        class="uppercase py-3 bg-secondary mt-4 border border-white tracking-[0.3em] text-sm
          duration-300 hover:bg-white hover:border-secondary hover:text-secondary flex justify-center
-         items-center gap-x-2"
+         items-center gap-x-2 max-[600px]:w-[90vw] md:px-12"
         ><WhatsappIcon class="size-5" />
         <p>¡Confirmar con Cinthia!</p>
       </a>
