@@ -1,0 +1,82 @@
+---
+import ChurchIcon from "../../public/svgs/Church.astro";
+import CupIcon from "../../public/svgs/Cup.astro";
+---
+
+<main class="mt-[100px] flex flex-col justify-center items-center gap-y-6">
+  <img src="./images/flowerPlace.png" class="-mb-6" alt="Flor de adorno" />
+  <h2 class="text-primary font-normal text-6xl">Cuándo & Dónde</h2>
+  <p
+    class="text-gray max-w-[600px] text-center text-2xl font-light text-balance"
+  >
+    Nos encantaría que nos acompañaras
+  </p>
+
+  <article class="bg-third grid grid-cols-2 w-[90%] py-8 text-white relative">
+    <div
+      class="h-full w-px bg-white absolute top-0 left-1/2 transform -translate-x-1/2"
+    >
+    </div>
+    <aside class="flex flex-col justify-center items-center font-light">
+      <div class="relative">
+        <div class="w-[70px] h-[70px] rounded-full bg-white -z-50"></div>
+        <ChurchIcon
+          class="size-12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 text-secondary"
+        />
+      </div>
+      <span class="font-bold text-3xl my-4">Ceremonia</span>
+      <p>Sábado, 20 de Julio, 2024</p>
+      <p>03:00 PM</p>
+      <p>Santuario de Nuestra Sra. de la Merced</p>
+      <p>Merced 2, Centro, 38400 Valle de Santiago, Gto.</p>
+      <a
+        href="https://www.google.com/maps/place/Santuario+de+Nuestra+Sra+de+la+Merced/@20.3905939,-101.18815,17z/data=!3m1!4b1!4m6!3m5!1s0x842c8d0c43ba47f5:0x26a2dcc96a783fac!8m2!3d20.3905939!4d-101.18815!16s%2Fg%2F1jkys1840?utm_campaign=tt-sps&coh=209934&entry=tts"
+        target="_blank"
+        rel="noopener"
+        class="uppercase px-12 py-3 bg-secondary mt-4 border border-white tracking-[0.3em] text-sm
+         duration-300 hover:bg-white hover:border-secondary hover:text-secondary"
+        >Ver ubicación
+      </a>
+    </aside>
+
+    <aside class="flex flex-col justify-center items-center font-light">
+      <div class="relative">
+        <div class="w-[70px] h-[70px] rounded-full bg-white -z-50"></div>
+        <CupIcon
+          class="size-12 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 text-secondary"
+        />
+      </div>
+      <span class="font-bold text-3xl my-4">Recepción</span>
+      <p>Sábado, 20 de Julio, 2024</p>
+      <p>04:00 PM</p>
+      <p>Salón Hacienda</p>
+      <p>38400, 1o. de Mayo 50, Emiliano Zapata, Valle de Santiago, Gto.</p>
+      <a
+        href="https://www.google.com/maps/place/Sal%C3%B3n+Hacienda/@20.400419,-101.1934861,17z/data=!3m1!4b1!4m6!3m5!1s0x842c8da7ae07da87:0x5331ccaab04352b9!8m2!3d20.400419!4d-101.1934861!16s%2Fg%2F11g8bvv3bx?utm_campaign=tt-sps&coh=209934&entry=tts"
+        target="_blank"
+        rel="noopener"
+        class="uppercase px-12 py-3 bg-secondary mt-4 border border-white tracking-[0.3em] text-sm
+         duration-300 hover:bg-white hover:border-secondary hover:text-secondary"
+        >Ver ubicación
+      </a>
+    </aside>
+  </article>
+</main>
+
+<style>
+  h2 {
+    font-family: "Adamina", serif;
+  }
+
+  p {
+    font-family: "Mulish Variable", sans-serif;
+  }
+
+  span {
+    font-family: "Alice", serif;
+  }
+
+  input::placeholder {
+    color: #94a3b8;
+  }
+</style>

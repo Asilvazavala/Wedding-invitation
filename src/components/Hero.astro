@@ -1,0 +1,109 @@
+<main
+  class="flex flex-col justify-center items-center text-white h-screen gap-y-8"
+>
+  <img
+    src="./images/Cindy y yo.jpg"
+    class="w-full h-fit opacity-75 brightness-75 -z-10 absolute top-0 left-0"
+    alt="Cinthia y Antonio"
+  />
+
+  <h2 class="text-2xl">¡NOS CASAMOS!</h2>
+  <h1 class="font-bold text-9xl">Cinthia & Antonio</h1>
+
+  <article class="flex gap-x-8" id="contador">
+    <aside
+      class="flex flex-col justify-center items-center border border-white py-4 px-12"
+    >
+      <span id="dias" class="text-6xl font-bold">66</span>
+      <span class="text-xl">Días</span>
+    </aside>
+
+    <aside
+      class="flex flex-col justify-center items-center border border-white py-4 px-12"
+    >
+      <span id="horas" class="text-6xl font-bold">15</span>
+      <span class="text-xl">Horas</span>
+    </aside>
+
+    <aside
+      class="flex flex-col justify-center items-center border border-white py-4 px-12"
+    >
+      <span id="minutos" class="text-6xl font-bold">49</span>
+      <span class="text-xl">Minutos</span>
+    </aside>
+
+    <aside
+      class="flex flex-col justify-center items-center border border-white py-4 px-12"
+    >
+      <span id="segundos" class="text-6xl font-bold">10</span>
+      <span class="text-xl">Segundos</span>
+    </aside>
+  </article>
+
+  <article class="flex justify-center items-center">
+    <div class="h-0.5 w-32 bg-third mr-4"></div>
+    <p class="uppercase font-light text-xl">4 de enero de 2025</p>
+    <div class="h-0.5 w-32 bg-third ml-4"></div>
+  </article>
+</main>
+
+<style>
+  h1 {
+    font-family: "Mea Culpa", cursive;
+  }
+
+  h2 {
+    font-family: "Adamina", serif;
+  }
+
+  span {
+    font-family: "Mulish Variable", sans-serif;
+  }
+
+  /* body {
+  font-family: 'Alice', serif;
+} */
+
+  input::placeholder {
+    color: #94a3b8;
+  }
+</style>
+
+<script>
+  const fechaObjetivo = new Date("2024-06-04T00:00:00").getTime();
+
+  const intervalo = setInterval(() => {
+    const fechaActual = new Date().getTime();
+
+    const diferencia = fechaObjetivo - fechaActual;
+
+    const diasRestantes = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horasRestantes = Math.floor(
+      (diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutosRestantes = Math.floor(
+      (diferencia % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const segundosRestantes = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    let dias = document.getElementById("dias");
+    let horas = document.getElementById("horas");
+    let minutos = document.getElementById("minutos");
+    let segundos = document.getElementById("segundos");
+
+    if (dias && horas && minutos && segundos) {
+      dias.innerText = diasRestantes.toString();
+      horas.innerText = horasRestantes.toString();
+      minutos.innerText = minutosRestantes.toString();
+      segundos.innerText = segundosRestantes.toString();
+    }
+
+    const contador = document.getElementById("contador");
+
+    if (diferencia < 0 && contador) {
+      clearInterval(intervalo);
+      contador.innerHTML =
+        "<span class='text-3xl font-bold'>¡Felices nupcias!</span>";
+    }
+  }, 1000);
+</script>
