@@ -42,6 +42,10 @@ npm install @fontsource-variable/adamina @fontsource-variable/mulish @fontsource
 
 ## 🎆 Imágenes del proyecto
 
-<!-- ![logo](https://github.com/Asilvazavala/Elecciones-2024/blob/1bd11463a369434a8ba764ab99f587dca2ce2408/public/Benjamin.png)
+![Version-web](https://github.com/Asilvazavala/Wedding-invitation/blob/6c214a9a957587924a5032e3fcdad48fe84f48d1/public/images/version-web.png)
 
-![logo](https://github.com/Asilvazavala/Elecciones-2024/blob/1bd11463a369434a8ba764ab99f587dca2ce2408/public/logo_PAN.png) -->
+![Version-web2](https://github.com/Asilvazavala/Wedding-invitation/blob/6c214a9a957587924a5032e3fcdad48fe84f48d1/public/images/version-web2.png)
+
+![Version-mobile](https://github.com/Asilvazavala/Wedding-invitation/blob/6c214a9a957587924a5032e3fcdad48fe84f48d1/public/images/version-mobile.png)
+
+![Version-mobile2](https://github.com/Asilvazavala/Wedding-invitation/blob/6c214a9a957587924a5032e3fcdad48fe84f48d1/public/images/version-mobile2.png)
