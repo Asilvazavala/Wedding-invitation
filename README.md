@@ -1,6 +1,6 @@
 # Acerca de Invitación de boda
 
-Proyecto creado para invitar a mi boda a mis seres queridos, hecho con amor para mi futura esposa Cinthia ❤️.
+Proyecto creado para invitar a nuestra boda a nuestros seres queridos, hecho con amor para mi futura esposa Cinthia ❤️.
 
 Tecnologías: Astro, TypeScript & TailwindCSS.
 
