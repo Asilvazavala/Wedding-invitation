@@ -1,0 +1,71 @@
+<article
+  class="gap-x-2 grid grid-cols-4 px-2 py-6 md:gap-x-8 bg-third w-full text-white"
+  id="contador"
+>
+  <aside
+    class="flex flex-col justify-center items-center py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
+  >
+    <span id="dias" class="text-[7vw] md:text-[3.5vw] font-bold">66</span>
+    <span class="text-[4vw] md:text-[1.5vw]">Días</span>
+  </aside>
+
+  <aside
+    class="flex flex-col justify-center items-center py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
+  >
+    <span id="horas" class="text-[7vw] md:text-[3.5vw] font-bold">15</span>
+    <span class="text-[4vw] md:text-[1.5vw]">Horas</span>
+  </aside>
+
+  <aside
+    class="flex flex-col justify-center items-center py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
+  >
+    <span id="minutos" class="text-[7vw] md:text-[3.5vw] font-bold">49</span>
+    <span class="text-[4vw] md:text-[1.5vw]">Minutos</span>
+  </aside>
+
+  <aside
+    class="flex flex-col justify-center items-center py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
+  >
+    <span id="segundos" class="text-[7vw] md:text-[3.5vw] font-bold">10</span>
+    <span class="text-[4vw] md:text-[1.5vw]">Segundos</span>
+  </aside>
+</article>
+
+<script>
+  const fechaObjetivo = new Date("2025-01-04T00:00:00").getTime();
+
+  const intervalo = setInterval(() => {
+    const fechaActual = new Date().getTime();
+
+    const diferencia = fechaObjetivo - fechaActual;
+
+    const diasRestantes = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+    const horasRestantes = Math.floor(
+      (diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutosRestantes = Math.floor(
+      (diferencia % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const segundosRestantes = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+    let dias = document.getElementById("dias");
+    let horas = document.getElementById("horas");
+    let minutos = document.getElementById("minutos");
+    let segundos = document.getElementById("segundos");
+
+    if (dias && horas && minutos && segundos) {
+      dias.innerText = diasRestantes.toString();
+      horas.innerText = horasRestantes.toString();
+      minutos.innerText = minutosRestantes.toString();
+      segundos.innerText = segundosRestantes.toString();
+    }
+
+    const contador = document.getElementById("contador");
+
+    if (diferencia < 0 && contador) {
+      clearInterval(intervalo);
+      contador.innerHTML =
+        "<span class='text-3xl font-bold'>¡Felices nupcias!</span>";
+    }
+  }, 1000);
+</script>

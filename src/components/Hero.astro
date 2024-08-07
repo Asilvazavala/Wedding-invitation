@@ -1,54 +1,21 @@
 <main
-  class="flex flex-col justify-center items-center text-white gap-y-8 h-screen
-  max-[1000px]:pb-48 max-[1000px]:-mb-48 lg:mb-[85vh]"
+  class="relative flex flex-col justify-end items-center h-[70vh] gap-y-4 md:h-screen"
 >
   <img
     src="/images/Cindy y yo.webp"
-    class="w-full object-cover h-[70%] opacity-75 brightness-75 -z-10 absolute top-0 left-0
-    lg:h-[170%]"
+    class="w-full object-cover h-full opacity-75 brightness-50 -z-10 absolute top-0 left-0"
     alt="Cinthia y Antonio"
   />
 
-  <h2 class="text-xl md:text-[2vw]">¡NOS CASAMOS!</h2>
-  <h1 class="font-bold text-[52px] md:text-[10vw]">Cinthia & Antonio</h1>
+  <img
+    src="/images/Hero-boda.png"
+    class="w-64 text-center"
+    alt="Adorno flores"
+  />
 
-  <article class="gap-x-2 grid grid-cols-4 px-2 md:gap-x-8" id="contador">
-    <aside
-      class="flex flex-col justify-center items-center border border-white py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
-    >
-      <span id="dias" class="text-3xl md:text-[3.5vw] font-bold">66</span>
-      <span class="md:text-[1.5vw]">Días</span>
-    </aside>
-
-    <aside
-      class="flex flex-col justify-center items-center border border-white py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
-    >
-      <span id="horas" class="text-3xl md:text-[3.5vw] font-bold">15</span>
-      <span class="md:text-[1.5vw]">Horas</span>
-    </aside>
-
-    <aside
-      class="flex flex-col justify-center items-center border border-white py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
-    >
-      <span id="minutos" class="text-3xl md:text-[3.5vw] font-bold">49</span>
-      <span class="md:text-[1.5vw]">Minutos</span>
-    </aside>
-
-    <aside
-      class="flex flex-col justify-center items-center border border-white py-2 px-4 md:py-3 md:px-9 lg:py-4 lg:px-12"
-    >
-      <span id="segundos" class="text-3xl md:text-[3.5vw] font-bold">10</span>
-      <span class="md:text-[1.5vw]">Segundos</span>
-    </aside>
-  </article>
-
-  <article class="flex justify-center items-center">
-    <div class="h-0.5 w-16 md:w-32 bg-third mr-4"></div>
-    <p class="uppercase font-light md:text-[1.5vw] text-center">
-      4 de enero de 2025
-    </p>
-    <div class="h-0.5 w-16 md:w-32 bg-third ml-4"></div>
-  </article>
+  <p class="text-center font-light text-[5vw] text-white md:text-[4vw] mb-4">
+    04 / 01 / 2025
+  </p>
 </main>
 
 <style>
@@ -60,54 +27,8 @@
     font-family: "Adamina", serif;
   }
 
-  span {
-    font-family: "Mulish Variable", sans-serif;
-  }
-
-  /* body {
-  font-family: 'Alice', serif;
-} */
-
-  input::placeholder {
-    color: #94a3b8;
+  span,
+  p {
+    font-family: "Abril Fatface", system-ui;
   }
 </style>
-
-<script>
-  const fechaObjetivo = new Date("2025-01-04T00:00:00").getTime();
-
-  const intervalo = setInterval(() => {
-    const fechaActual = new Date().getTime();
-
-    const diferencia = fechaObjetivo - fechaActual;
-
-    const diasRestantes = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-    const horasRestantes = Math.floor(
-      (diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutosRestantes = Math.floor(
-      (diferencia % (1000 * 60 * 60)) / (1000 * 60)
-    );
-    const segundosRestantes = Math.floor((diferencia % (1000 * 60)) / 1000);
-
-    let dias = document.getElementById("dias");
-    let horas = document.getElementById("horas");
-    let minutos = document.getElementById("minutos");
-    let segundos = document.getElementById("segundos");
-
-    if (dias && horas && minutos && segundos) {
-      dias.innerText = diasRestantes.toString();
-      horas.innerText = horasRestantes.toString();
-      minutos.innerText = minutosRestantes.toString();
-      segundos.innerText = segundosRestantes.toString();
-    }
-
-    const contador = document.getElementById("contador");
-
-    if (diferencia < 0 && contador) {
-      clearInterval(intervalo);
-      contador.innerHTML =
-        "<span class='text-3xl font-bold'>¡Felices nupcias!</span>";
-    }
-  }, 1000);
-</script>

@@ -1,0 +1,65 @@
+---
+import Timer from "./Timer.astro";
+---
+
+<main class="flex flex-col justify-center items-center gap-y-6 mt-[50px]">
+  <aside
+    class="flex flex-col justify-center items-center my-8 text-[15vw] space-y-1"
+  >
+    <h3 class="text-gray leading-none -mb-10 md:-mb-28">Antonio</h3>
+    <h4 class="text-third leading-none">y</h4>
+    <h3 class="text-gray leading-none">Cinthia</h3>
+  </aside>
+
+  <img src="/images/flowerParents.png" class="-mb-6" alt="Flor de adorno" />
+  <h2 class="text-primary font-normal text-center text-[7vw] md:text-[5vw]">
+    Nuestra boda
+  </h2>
+
+  <article class="px-4">
+    <p
+      class="text-gray md:max-w-[600px] text-center font-light text-balance
+    max-[600px]:px-2 text-[4vw] lg:text-[2vw]"
+    >
+      Hemos decidido unir nuestras vidas en
+    </p>
+    <p
+      class="text-gray md:max-w-[600px] text-center font-light text-balance
+  max-[600px]:px-2 text-[4vw] lg:text-[2vw]"
+    >
+      Santo Matrimonio, con la bendición de Dios y nuestros padres, sería un
+      honor contar con tu presencia.
+    </p>
+  </article>
+
+  <article class="flex flex-col justify-center items-center w-full gap-y-2">
+    <p class="text-gray text-[4vw] lg:text-[2vw] my-4">¡ Faltan !</p>
+    <Timer />
+  </article>
+</main>
+
+<style>
+  h3 {
+    font-family: "Pinyon Script", cursive;
+  }
+
+  h4 {
+    font-family: "Mea Culpa", cursive;
+  }
+
+  h2 {
+    font-family: "Adamina", serif;
+  }
+
+  p {
+    font-family: "Mulish Variable", sans-serif;
+  }
+
+  span {
+    font-family: "Alice", serif;
+  }
+
+  input::placeholder {
+    color: #94a3b8;
+  }
+</style>
