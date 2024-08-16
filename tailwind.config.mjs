@@ -8,7 +8,7 @@ export default {
         secondary: "#d8ba99",
         third: "#d8ba99",
         blue: "#102C57",
-        gray: "#909484",
+        gray: "#aeb1a4",
       },
     },
   },
