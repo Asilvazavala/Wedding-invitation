@@ -1,9 +1,26 @@
+---
+import Gift from "../../public/svgs/Gift.astro";
+---
+
 <main
-  class="mt-[40px] flex flex-col justify-center items-center gap-y-12 text-white"
+  class="mt-[20px] flex flex-col justify-center items-center gap-y-12 text-white"
 >
   <h2 class="text-primary font-normal text-[8vw] md:text-[5vw]">
     ¡Te esperamos!
   </h2>
+
+  <article class="flex flex-col justify-center items-center mt-16 mb-12">
+    <Gift class="size-16 text-secondary" />
+    <a
+      href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/51579192"
+      target="_blank"
+      rel="noopener"
+      class="uppercase px-12 py-3 bg-secondary mt-4 border border-white tracking-[0.3em]
+         duration-300 hover:bg-white hover:border-secondary hover:text-secondary text-[4vw] md:text-[1.2vw]"
+      >Mesa de regalos
+    </a>
+  </article>
+
   <article
     class="bg-primary py-12 flex justify-center items-center w-full text-center px-2 text-balance
     text-[4vw] md:text-[1.5vw]"
@@ -24,6 +41,10 @@
 <style>
   h2 {
     font-family: "Adamina", serif;
+  }
+
+  p {
+    font-family: "Alice", serif;
   }
 
   span {
